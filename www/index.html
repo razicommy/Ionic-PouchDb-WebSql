@@ -122,7 +122,9 @@
       function initDB() {
         // Creates the database or opens if it already exists
         _db = new PouchDB('birthdays', {
-          adapter: 'cordova-sqlite'
+          adapter: 'cordova-sqlite',
+            iosDatabaseLocation: 'Library',
+  androidDatabaseImplementation: 2
         });
       };
 

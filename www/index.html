@@ -90,18 +90,7 @@
   </script>
     <script src="lib/pouch/pouchdb-6.1.2.js"></script>
     <script src="lib/pouch/pouchdb.cordova-sqlite-2.0.2.js"></script>
-    <script>
-      document.addEventListener('deviceready', function () {
-        var db = new PouchDB('database.db', {adapter: 'cordova-sqlite'});
-        db.post({}).then(function (res) {
-          return db.get(res.id);
-        }).then(function (doc) {
-          alert('stored a document! ' + JSON.stringify(doc));
-          alert('adapter is: ' + db.adapter);
-          alert('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
-        }).catch(console.log.bind(console));
-      });
-    </script>
+
   <script>
     /*create js object app, bind to html app, use ionic framework*/
     var app = angular.module('app', ['ionic']);
